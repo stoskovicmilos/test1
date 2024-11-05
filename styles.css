@@ -1,0 +1,105 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f5df57;
+  font-family: Arial, sans-serif;
+}
+
+/* Stilovi za karticu */
+.card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: left; /* Poravnaj sav tekst levo */
+  position: relative; /* Omogućava pozicioniranje pseudo-elementa */
+  padding: 20px; /* Padding unutar kartice */
+}
+
+/* Pseudo-element za crni ugao */
+.card::after {
+  content: '';
+  position: absolute;
+  width: 40%; /* Širina crnog dela */
+  height: 40%; /* Visina crnog dela */
+  background-color: #000; /* Crna boja */
+  border-top-left-radius: 8px; /* Zaobljeni gornji levu ugao */
+  border-bottom-right-radius: 8px; /* Zaobljeni donji desni ugao */
+  bottom: 0; /* Pozicija na dnu */
+  right: 0; /* Pozicija sa desne strane */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Senka za dodatni efekat */
+  z-index: -1; /* Ispod ostalog sadržaja */
+}
+
+/* Stilovi za sadržaj kartice */
+.card-content {
+  padding: 20px;
+}
+
+/* Etiketa */
+.label {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Datum */
+.date {
+  font-size: 12px;
+  color: #777;
+  margin: 8px 0;
+}
+
+/* Naslov */
+h2 {
+  font-size: 20px;
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Opis */
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+/* Autor */
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+/* Dugme */
+.button {
+  display: inline-block; /* Omogućava dodavanje padding-a i margine */
+  padding: 10px 20px; /* Unutrašnji razmak */
+  background-color: #000000; /* Pozadina dugmeta */
+  color: white; /* Boja teksta */
+  text-align: center; /* Centriranje teksta unutar dugmeta */
+  text-decoration: none; /* Ukloni podvlačenje */
+  border-radius: 5px; /* Zaobljeni uglovi */
+  font-size: 18px; /* Veličina fonta */
+  transition: background-color 0.3s; /* Efekat prelaza */
+}
+
+.button:hover {
+  background-color: #a501a8; /* Tamnija pozadina prilikom prelaska miša */
+}
